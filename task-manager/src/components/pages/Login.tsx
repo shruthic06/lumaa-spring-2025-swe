@@ -1,4 +1,5 @@
 import React,  { useState } from 'react'
+import { useNavigate } from "react-router-dom";
 import './Login.css'
 import user_img from '../assets/person.png'
 import email_img from '../assets/email.png'
@@ -6,7 +7,19 @@ import pwd_img from '../assets/password.png'
 
 const Login = () => {
 
-  const [state, setState] = useState("Sign Up");
+    const navigate = useNavigate();  // Hook to navigate programmatically
+
+  const authenticateLogin = (currentState: string) => {
+    
+    if (currentState === "Login") {
+        // Authnetication with db performed here
+      } 
+      
+      navigate("/tasks"); // Redirect to tasks page
+  };
+
+
+  const [state, setState] = useState("Login");
   
   return (
     <div className = 'container'>
@@ -33,11 +46,16 @@ const Login = () => {
         <input type = "password" placeholder='Password'/>
       </div>
       </div>
-      {state === "Sign Up"? <div></div> :       <div className="forgot_password">Forgot Password?</div>}
-
+      {state === "Sign Up"? <div></div> : <div className="forgot_password">Forgot Password?</div>}
+      {state === "Login" && (
+        <div className="new_user" onClick={() => setState("Sign Up")}>
+          Do not have an account yet? <span className="signup_link">Sign Up Here</span>
+        </div>
+      )}
       <div className = 'submit-container'>
-        <div className = {state === 'Login'?'submit grey':'submit'} onClick={()=> {setState("Sign Up")}}>Sign Up</div>
-        <div className = {state === 'Sign Up'?'submit grey':'submit'} onClick={()=> {setState("Login")}}>Login</div>
+      <div className='submit' onClick={() => authenticateLogin(state)}>
+          {state === 'Sign Up' ? 'Sign Up' : 'Login'}
+        </div>
       </div>
     </div>
   )

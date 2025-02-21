@@ -63,10 +63,21 @@
 
 .forgot_password{
     padding-left: 60px;
-    margin-top: 30px;
+    margin-top: 20px;
     color: #3c009d;
     font-size: 16px;
     cursor: pointer;
+}
+
+.new_user {
+    padding-left: 60px;
+    margin-top: 10px;
+    cursor: pointer;
+    color: #3c009d; 
+}
+  
+.signup_link {
+    font-weight: bold;
 }
 
 .submit-container{
@@ -86,9 +97,4 @@
     border-radius: 50px;
     font-size:20px;
     cursor: pointer;
-}
-
-.grey{
-    background: #eaeaea;
-    color: #676767;
 }
