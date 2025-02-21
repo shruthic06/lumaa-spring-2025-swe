@@ -34,7 +34,7 @@ const Tasks = () => {
       <div className="input-container">
         <input
           type="text"
-          className="input"
+          className="task-input"
           placeholder="Hi there, what's on your list today?"
           value={state}
           onChange={onChangeofInput}

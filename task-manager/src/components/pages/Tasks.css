@@ -16,13 +16,15 @@
     margin-bottom: 15px;
 }
 
-.input {
+.task-input {
     flex-grow: 1;
     padding: 10px;
-    font-size: 1rem;
+    font-size: 1.2rem;
     border: 1px solid #ccc;
     border-radius: 10px;
     margin-right: 10px;
+    width: 400px;
+    height: 80px;
 }
 
 
