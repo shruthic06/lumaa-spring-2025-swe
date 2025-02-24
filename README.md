@@ -1,10 +1,10 @@
-# **Task Management Application**
+# Task Management Application
 
-🚀 **A full-stack task management app using React, TypeScript, Node.js, and PostgreSQL.**
+A full-stack task management app using React, TypeScript, Node.js, and PostgreSQL.
 
 ---
 
-## **📌 Table of Contents**
+## Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
@@ -21,57 +21,57 @@
 
 ---
 
-## **📌 Overview**
+## Overview
 
-This **Task Management Application** allows users to:
-✅ **Register/Login** with authentication (JWT).  
-✅ **Create, View, Update, and Delete** tasks.  
-✅ **Secure task operations** so only logged-in users can manage tasks.  
-✅ **Persist tasks across sessions** (stored in PostgreSQL).  
-
----
-
-## **📌 Features**
-
-✅ **User Authentication** (Register & Login).  
-✅ **JWT-based authentication** to secure routes.  
-✅ **Tasks Management** (Create, Read, Update, Delete).  
-✅ **Task Ownership** – Only task creators can modify their tasks.  
-✅ **Password Hashing** using `bcrypt` for security.  
-✅ **Protected Routes** – Users must log in to access tasks.  
+This Task Management Application allows users to:
+- Register/Login with authentication (JWT).
+- Create, View, Update, and Delete tasks.
+- Secure task operations so only logged-in users can manage tasks.
+- Persist tasks across sessions (stored in PostgreSQL).
 
 ---
 
-## **📌 Tech Stack**
+## Features
 
-| **Technology**    | **Purpose** |
-|------------------|------------|
-| **React + TypeScript** | Frontend framework |
-| **Node.js + Express.js** | Backend framework |
-| **PostgreSQL** | Database for storing tasks & users |
-| **Prisma ORM** | Database management |
-| **JWT (JSON Web Tokens)** | Authentication |
-| **Bcrypt** | Secure password hashing |
-| **Nodemailer** | Email service for password resets |
+- User Authentication (Register & Login).
+- JWT-based authentication to secure routes.
+- Tasks Management (Create, Read, Update, Delete).
+- Task Ownership – Only task creators can modify their tasks.
+- Password Hashing using bcrypt for security.
+- Protected Routes – Users must log in to access tasks.
 
 ---
 
-## **📌 Setup & Installation**
+## Tech Stack
 
-### **🛠 Backend Setup**
+| Technology    | Purpose |
+|--------------|---------|
+| React + TypeScript | Frontend framework |
+| Node.js + Express.js | Backend framework |
+| PostgreSQL | Database for storing tasks & users |
+| Prisma ORM | Database management |
+| JWT (JSON Web Tokens) | Authentication |
+| Bcrypt | Secure password hashing |
+| Nodemailer | Email service for password resets |
 
-#### **1️⃣ Clone the Repository**
+---
+
+## Setup & Installation
+
+### Backend Setup
+
+#### Clone the Repository
 ```sh
-git clone https://github.com/your-username/task-manager.git](https://github.com/shruthic06/lumaa-spring-2025-swe.git
+git clone https://github.com/your-username/task-manager.git
 cd task-manager/backend
 ```
 
-#### **2️⃣ Install Dependencies**
+#### Install Dependencies
 ```sh
 npm install
 ```
 
-#### **3️⃣ Configure Environment Variables**
+#### Configure Environment Variables
 Create a `.env` file in `backend/` and add:
 
 ```
@@ -83,87 +83,87 @@ SMTP_HOST="smtp.gmail.com"
 SMTP_PORT=587
 ```
 
-- Replace **`your_password`** with your PostgreSQL password.
-- Replace **`your_secret_key`** with a strong JWT secret.
+- Replace `your_password` with your PostgreSQL password.
+- Replace `your_secret_key` with a strong JWT secret.
 
-#### **4️⃣ Set Up Database & Run Migrations**
+#### Set Up Database & Run Migrations
 ```sh
 npx prisma migrate dev --name init
 npx prisma generate
 ```
-✅ This will create `users` and `tasks` tables in PostgreSQL.
+This will create `users` and `tasks` tables in PostgreSQL.
 
-#### **5️⃣ Start the Server**
+#### Start the Server
 ```sh
 node server.js
 ```
-🔹 Runs on **[http://localhost:5000](http://localhost:5000)**.
+Runs on http://localhost:5000.
 
 ---
 
-### **🛠 Frontend Setup**
+### Frontend Setup
 
-#### **1️⃣ Navigate to the Frontend**
+#### Navigate to the Frontend
 ```sh
 cd ../frontend
 ```
 
-#### **2️⃣ Install Dependencies**
+#### Install Dependencies
 ```sh
 npm install
 ```
 
-#### **3️⃣ Configure Environment Variables**
+#### Configure Environment Variables
 Create a `.env` file in `frontend/`:
 
 ```
 REACT_APP_API_URL=http://localhost:5000/api
 ```
 
-#### **4️⃣ Start the Frontend**
+#### Start the Frontend
 ```sh
 npm start
 ```
-🔹 Runs on **[http://localhost:5000](http://localhost:5000)**.
+Runs on http://localhost:3000.
 
 ---
 
-## **📌 API Documentation**
+## API Documentation
 
-### **1️⃣ Authentication Routes**
+### Authentication Routes
 
 | Method | Endpoint | Description |
 |--------|---------|-------------|
-| `POST` | `/auth/register` | Register a new user |
-| `POST` | `/auth/login` | Authenticate user & return JWT |
-| `POST` | `/auth/forgot-password` | Sends password reset link via email |
-| `POST` | `/auth/reset-password` | Resets password with a token |
+| POST | /auth/register | Register a new user |
+| POST | /auth/login | Authenticate user & return JWT |
+| POST | /auth/forgot-password | Sends password reset link via email |
+| POST | /auth/reset-password | Resets password with a token |
 
-### **2️⃣ Task Routes** (Protected by JWT)
+### Task Routes (Protected by JWT)
 
 | Method | Endpoint | Description |
 |--------|---------|-------------|
-| `GET` | `/tasks` | Fetch all tasks of the logged-in user |
-| `POST` | `/tasks` | Create a new task |
-| `PUT` | `/tasks/:id` | Update a task (edit title, mark complete) |
-| `DELETE` | `/tasks/:id` | Delete a task |
+| GET | /tasks | Fetch all tasks of the logged-in user |
+| POST | /tasks | Create a new task |
+| PUT | /tasks/:id | Update a task (edit title, mark complete) |
+| DELETE | /tasks/:id | Delete a task |
 
 ---
 
-## **📌 Demo Video**
+## Demo Video
 
-🎥 **[Click Here to Watch the Demo](https://drive.google.com/drive/folders/1o4hYsuO6sq6LqEK9hMQXlw8bW-GoSwNw?usp=sharing)**
-
----
-
-## **📌 Salary Expectations**
-
-💰 **Expected Salary:** `$X,XXX per month`  
-💼 **Availability:** Full-time / Part-time / Freelance  
+[Click Here to Watch the Demo](https://your-video-link.com)
 
 ---
 
-## **📌 Project Structure**
+## Salary Expectations
+
+- Expected Salary: $X,XXX per month
+- Availability: Full-time / Part-time / Freelance  
+
+---
+
+## Project Structure
 
 ```
 task-manager/
@@ -187,14 +187,13 @@ task-manager/
 
 ---
 
-## **📌 Contact**
+## Contact
 
-📧 **Email:** [your.email@example.com](mailto:your.email@example.com)  
-💼 **LinkedIn:** [Your Profile](https://linkedin.com/in/yourprofile)  
-🔗 **GitHub:** [Your GitHub](https://github.com/your-username)  
+- Email: your.email@example.com
+- LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
+- GitHub: [Your GitHub](https://github.com/your-username)
 
 ---
 
-### 🎉 **Thank you for reviewing my submission!** 🚀🔥  
-Let me know if you have any questions! 😊
+Thank you for reviewing my submission. Let me know if you have any questions.
 
