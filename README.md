@@ -173,12 +173,12 @@ task-manager/
 │   ├── server.js            # Main backend server
 │   ├── .env                 # Environment variables
 │
-│── frontend/
-│   ├── src/
-│   │   ├── components/      # React components
-│   │   ├── pages/           # Login, Tasks, Forgot Password
-│   │   ├── App.tsx          # React Router
-│   ├── .env                 # Frontend API config
+│
+│── src/
+│   ├── components/      # React components
+│   ├── pages/           # Login, Tasks, Forgot Password
+│   ├── App.tsx          # React Router
+│                  
 │
 │── README.md
 │── package.json
