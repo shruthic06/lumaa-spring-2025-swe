@@ -6,11 +6,15 @@ interface Task {
   title: string;
 }
 
-const Tasks: React.FC = () => {
+interface TasksProps {
+  handleLogout: () => void;
+}
+
+const Tasks: React.FC<TasksProps> = ({ handleLogout }) => {
   const [tasks, setTasks] = useState<Task[]>([]);
   const [taskTitle, setTaskTitle] = useState("");
 
-  // ✅ Fetch tasks from the backend when the page loads
+  // Function to get existing tasks related to the user
   useEffect(() => {
     const fetchTasks = async () => {
       const token = localStorage.getItem("token");
@@ -23,7 +27,7 @@ const Tasks: React.FC = () => {
 
         if (response.ok) {
           const data = await response.json();
-          setTasks(data); // ✅ Save tasks in state
+          setTasks(data); 
         } else {
           console.error("Failed to fetch tasks");
         }
@@ -35,13 +39,13 @@ const Tasks: React.FC = () => {
     fetchTasks();
   }, []);
 
-  // ✅ Add a new task to the backend
+  // Add a new task 
   const addTask = async () => {
     const token = localStorage.getItem("token");
     if (!token || taskTitle.trim() === "") return;
 
     try {
-      const response = await fetch("http://localhost:5000/api/tasks", {
+      const response = await fetch("http://localhost:/api/tasks", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -52,7 +56,7 @@ const Tasks: React.FC = () => {
 
       if (response.ok) {
         const newTask = await response.json();
-        setTasks([...tasks, newTask]); // ✅ Add task to state
+        setTasks([...tasks, newTask]); 
         setTaskTitle("");
       } else {
         console.error("Failed to create task");
@@ -62,7 +66,7 @@ const Tasks: React.FC = () => {
     }
   };
 
-  // ✅ Edit a task in the backend
+  // Edit a task 
   const editTask = async (taskId: string) => {
     const updatedTitle = prompt("Edit Task:");
     if (!updatedTitle || updatedTitle.trim() === "") return;
@@ -90,7 +94,7 @@ const Tasks: React.FC = () => {
     }
   };
 
-  // ✅ Delete a task from the backend
+  // Delete a task 
   const deleteTask = async (taskId: string) => {
     const token = localStorage.getItem("token");
     if (!token) return;
@@ -104,7 +108,7 @@ const Tasks: React.FC = () => {
       });
 
       if (response.ok) {
-        setTasks(tasks.filter((task) => task.id !== taskId)); // ✅ Remove task from state
+        setTasks(tasks.filter((task) => task.id !== taskId)); 
       } else {
         console.error("Failed to delete task");
       }
@@ -115,6 +119,11 @@ const Tasks: React.FC = () => {
 
   return (
     <div className="task-container">
+      {/* Logout button */}
+      <button onClick={handleLogout} className="logout-btn">
+        Logout
+      </button>
+
       <div className="input-container">
         <input
           type="text"

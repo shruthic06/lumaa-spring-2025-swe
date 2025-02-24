@@ -18,7 +18,7 @@
 }
 
 .text{
-    color: #3c009d;
+    color: #5390D9;
     font-size: 48px;
     font-weight:500px;
 }
@@ -26,7 +26,7 @@
 .underline{
     width:60px;
     height:5px;
-    background: #3c009d;
+    background: #5390D9;
     border-radius: 10px;
 }
 
@@ -62,18 +62,17 @@
 }
 
 .forgot_password{
-    padding-left: 60px;
+    align-items: center;
     margin-top: 20px;
-    color: #3c009d;
+    color: #5390D9;
     font-size: 16px;
     cursor: pointer;
 }
 
 .new_user {
-    padding-left: 60px;
     margin-top: 10px;
     cursor: pointer;
-    color: #3c009d; 
+    color: #5390D9; 
 }
   
 .signup_link {
@@ -93,7 +92,7 @@
     width: 200px;
     height: 50px;
     color: white;
-    background: #4c00b4;
+    background: #5390D9;
     border-radius: 50px;
     font-size:20px;
     cursor: pointer;

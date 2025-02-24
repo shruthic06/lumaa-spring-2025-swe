@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./components/pages/Login";
 import Tasks from "./components/pages/Tasks";
+import ForgotPassword from "./components/pages/ForgotPassword";
+import ResetPassword from "./components/pages/ResetPassword";
 import "./App.css";
 
 const App: React.FC = () => {
@@ -20,19 +22,16 @@ const App: React.FC = () => {
   return (
     <Router>
       <div className="App">
-        {token && (
-          <button onClick={handleLogout} className="logout-btn">
-            Logout
-          </button>
-        )}
         <Routes>
-          {/* ✅ Fix: Pass setToken using an inline function */}
-          <Route path="/" element={token ? <Navigate to="/tasks" /> : <Login setToken={(t) => setToken(t)} />} />
-          <Route path="/tasks" element={token ? <Tasks /> : <Navigate to="/" />} />
+          <Route path="/" element={token ? <Navigate to="/tasks" /> : <Login setToken={setToken} />} />
+          <Route path="/tasks" element={token ? <Tasks handleLogout={handleLogout} /> : <Navigate to="/" />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/reset-password/:token" element={<ResetPassword />} />
         </Routes>
       </div>
     </Router>
   );
 };
+
 
 export default App;
