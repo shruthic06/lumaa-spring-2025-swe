@@ -152,7 +152,7 @@ Runs on http://localhost:5000.
 
 ## Demo Video
 
-[Click Here to Watch the Demo](https://your-video-link.com)
+[Click Here to Watch the Demo](https://drive.google.com/drive/folders/1mN0OLfVEyojiE8lozxsLZx6tmKKYfveU?usp=sharing)
 
 ---
 
@@ -189,9 +189,7 @@ task-manager/
 
 ## Contact
 
-- Email: your.email@example.com
-- LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
-- GitHub: [Your GitHub](https://github.com/your-username)
+- Email: schan160@asu.edu
 
 ---
 
