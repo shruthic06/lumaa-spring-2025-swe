@@ -62,7 +62,7 @@ This **Task Management Application** allows users to:
 
 #### **1️⃣ Clone the Repository**
 ```sh
-git clone https://github.com/your-username/task-manager.git
+git clone https://github.com/your-username/task-manager.git](https://github.com/shruthic06/lumaa-spring-2025-swe.git
 cd task-manager/backend
 ```
 
@@ -124,7 +124,7 @@ REACT_APP_API_URL=http://localhost:5000/api
 ```sh
 npm start
 ```
-🔹 Runs on **[http://localhost:3000](http://localhost:3000)**.
+🔹 Runs on **[http://localhost:5000](http://localhost:5000)**.
 
 ---
 
@@ -152,7 +152,7 @@ npm start
 
 ## **📌 Demo Video**
 
-🎥 **[Click Here to Watch the Demo](https://your-video-link.com)**
+🎥 **[Click Here to Watch the Demo](https://drive.google.com/drive/folders/1o4hYsuO6sq6LqEK9hMQXlw8bW-GoSwNw?usp=sharing)**
 
 ---
 
