@@ -97,7 +97,7 @@ This will create `users` and `tasks` tables in PostgreSQL.
 ```sh
 node server.js
 ```
-Runs on http://localhost:5000.
+Runs on http://localhost:3000.
 
 ---
 
@@ -117,14 +117,14 @@ npm install
 Create a `.env` file in `frontend/`:
 
 ```
-REACT_APP_API_URL=http://localhost:5000/api
+REACT_APP_API_URL=http://localhost:3000/api
 ```
 
 #### Start the Frontend
 ```sh
 npm start
 ```
-Runs on http://localhost:5000.
+Runs on http://localhost:3000.
 
 ---
 
