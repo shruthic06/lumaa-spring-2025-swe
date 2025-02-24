@@ -62,7 +62,7 @@ This Task Management Application allows users to:
 
 #### Clone the Repository
 ```sh
-git clone https://github.com/your-username/task-manager.git
+git clone https://github.com/shruthic06/lumaa-spring-2025-swe.git
 cd task-manager/backend
 ```
 
@@ -124,7 +124,7 @@ REACT_APP_API_URL=http://localhost:5000/api
 ```sh
 npm start
 ```
-Runs on http://localhost:3000.
+Runs on http://localhost:5000.
 
 ---
 
@@ -158,8 +158,8 @@ Runs on http://localhost:3000.
 
 ## Salary Expectations
 
-- Expected Salary: $X,XXX per month
-- Availability: Full-time / Part-time / Freelance  
+- Expected Salary: $30/hr
+- Availability: Internship(May - August) 
 
 ---
 
