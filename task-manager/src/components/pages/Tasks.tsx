@@ -21,7 +21,7 @@ const Tasks: React.FC<TasksProps> = ({ handleLogout }) => {
       if (!token) return;
 
       try {
-        const response = await fetch("http://localhost:5000/api/tasks", {
+        const response = await fetch("http://localhost:3000/api/tasks", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -45,7 +45,7 @@ const Tasks: React.FC<TasksProps> = ({ handleLogout }) => {
     if (!token || taskTitle.trim() === "") return;
 
     try {
-      const response = await fetch("http://localhost:/api/tasks", {
+      const response = await fetch("http://localhost:3000/api/tasks", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -75,7 +75,7 @@ const Tasks: React.FC<TasksProps> = ({ handleLogout }) => {
     if (!token) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/api/tasks/${taskId}`, {
+      const response = await fetch(`http://localhost:3000/api/tasks/${taskId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -100,7 +100,7 @@ const Tasks: React.FC<TasksProps> = ({ handleLogout }) => {
     if (!token) return;
 
     try {
-      const response = await fetch(`http://localhost:5000/api/tasks/${taskId}`, {
+      const response = await fetch(`http://localhost:3000/api/tasks/${taskId}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,

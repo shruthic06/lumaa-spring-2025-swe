@@ -14,6 +14,7 @@ model User {
   resetToken        String?
   resetTokenExpiry  DateTime?
   tasks             Task[]
+  resetToken        String?
 }
 
 model Task {

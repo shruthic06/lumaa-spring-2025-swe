@@ -97,7 +97,7 @@ npx prisma generate
 ```sh
 node server.js
 ```
-🔹 Runs on **[http://localhost:5000](http://localhost:5000)**.
+🔹 Runs on **[http://localhost:3000](http://localhost:3000)**.
 
 ---
 
@@ -117,7 +117,7 @@ npm install
 Create a `.env` file in `frontend/`:
 
 ```
-REACT_APP_API_URL=http://localhost:5000/api
+REACT_APP_API_URL=http://localhost:3000/api
 ```
 
 #### **4️⃣ Start the Frontend**

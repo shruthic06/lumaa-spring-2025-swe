@@ -24,7 +24,7 @@ const Login: React.FC<LoginProps> = ({ setToken }) => {
         : { username: email, password };
 
     try {
-      const response = await fetch(`http://localhost:5000/api/auth/${endpoint}`, {
+      const response = await fetch(`http://localhost:3000/api/auth/${endpoint}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(requestBody),
@@ -76,7 +76,7 @@ const Login: React.FC<LoginProps> = ({ setToken }) => {
       </div>
 
       {/* Forgot Password (Only for Login) */}
-      {state === "Login" && <div className="forgot_password">Forgot Password?</div>}
+      {state === "Login" && <div className="forgot_password" onClick={() => navigate("/forgot-password")}>Forgot Password?</div>}
 
       {/* Toggle between Login and Sign Up */}
       {state === "Login" ? (
